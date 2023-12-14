@@ -1,0 +1,425 @@
+.accent-color, a:hover {
+  color: #a31d1d;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Document font defaults */
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #222020;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wrapper {
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+}
+
+/* Header Nav
+  ============================= */
+header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5rem;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+nav ul li:first-child {
+  margin-left: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #222020;
+}
+
+/* Branding section
+  ============================= */
+
+.branding {
+  height: 100vh;
+  text-align: center;
+}
+.logo {
+  width: 200px;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor Animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #222020; } /* カーソルの色 */
+}
+
+.subtitle span {
+  font-weight: 700;
+}
+
+.subtitle {
+  display: inline-block; 
+  overflow: hidden; /* はみ出したテキストを隠す */
+  border-right: .15em solid #222020; 
+  white-space: nowrap;
+  letter-spacing: .15em;
+  color: #a31d1d; 
+  animation: typing 4s steps(30, end) 1s forwards, blink-caret .75s step-end infinite; 
+  max-width: 40ch; /* テキストの実際の幅に合わせる */
+}
+
+.subtitle::after {
+  content: "|";
+  animation: blink-caret .75s step-end infinite;
+}
+
+/* icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* アイコン間のスペース */
+  margin-top: 3rem;
+}
+
+.icon_linkedin {
+  display: inline-block;
+  width: 32px; 
+  height: 32px; 
+  text-align: center;
+  line-height: 50px; 
+}
+
+.icon_mail {
+  display: inline-block;
+  width: 29px; 
+  height: 29px;
+  text-align: center;
+  line-height: 50px; /* テキストを垂直中央揃え */
+}
+
+.resume {
+  text-decoration:none;
+  color: #222020;
+}
+
+.resume:visited {
+  color: #a31d1d;
+}
+
+/* About section
+  ============================= */
+
+#about {
+  height: 100vh;
+  background-color: #a31d1d; 
+  color: #ffffff;
+  padding: 50px 0; 
+  overflow: auto;
+}
+
+.name-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 8rem;
+}
+
+.name-title-container h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center; /* 垂直中央揃え */
+}
+
+.vertical-line {
+  display: block;
+  width: 1px;
+  height: 38px; 
+  background-color: white;
+  margin-right: 5px; 
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+}
+
+.about_description {
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+/* Portfolio section
+  ============================= */
+
+#portfolio {
+  height: 100vh;
+  padding: 50px 0; 
+  overflow: auto;
+}
+
+#portfolio h1 {
+  font-size: 2em;
+  margin-bottom: 5px; 
+}
+
+.portfolio-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.portfolio-vertical-line {
+  display: block;
+  width: 1px;
+  height: 38px;
+  background-color: #222020;
+}
+
+.portfolio-sub-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: #222020;
+}
+
+.portfolio_contents {
+  display: flex;
+
+}
+
+#portfolio article, .portfolio_captier {
+  flex: 1; /* 拡大縮小の挙動を等しく設定 */
+}
+
+#portfolio article {
+  flex-basis: 55%;
+  margin-right: 3rem;
+}
+
+.portfolio_contents-subtitle {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.portfolio_description:before {
+  content: '●';
+  color: 222020;
+  margin-right: 0.3rem;
+}
+
+.portfolio_description {
+  margin-bottom: 1rem;
+}
+
+#portfolio ul {
+  margin-bottom: 1rem;
+}
+
+.portfolio_captier {
+  flex-basis: 45%;
+  max-width: 45%;
+  position: relative; 
+  top: -165px; 
+}
+
+.portfolio_captier img {
+  width: 100%; 
+  height: auto; 
+}
+
+/* Footer
+  ============================= */
+
+footer {
+  width: 100%;
+  height: 2rem;
+  background-color: #F7F7F7;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+/* Responsive
+  ============================= */
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  nav a {
+    font-size: 0.9em;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .branding .logo {
+    width: 150px;
+  }
+
+  .branding h1, #about h1, #portfolio h1 {
+    font-size: 1.8em;
+  }
+
+  .name-title-container h1, .portfolio-title-container h1 {
+    font-size: 1.4em;
+  }
+
+  .about_description,
+  .about_description_history, 
+  .portfolio_description {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+ 
+  .portfolio-sub-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-left: 1rem;
+  }
+
+  .portfolio_contents {
+    display: flex;
+  }
+
+  #portfolio article, .portfolio_captier {
+    flex: 1; /* 拡大縮小の挙動を等しく設定 */
+  }
+
+  #portfolio article {
+    flex-basis: 55%;
+    margin-right: 3rem;
+  }
+
+  .portfolio_subtitle {
+    font-weight: 600;
+  }
+
+  .portfolio_captier {
+    position: static;
+    flex-basis: 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .branding {
+    max-height: 100vh;
+    text-align: center;
+  }
+
+  .branding .logo {
+    width: 120px;
+  }
+
+  .branding h1, #about h1, #portfolio h1 {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .name-title-container h1, .portfolio-title-container h1 {
+    font-size: 1.2em;
+  }
+
+  .sub-title,
+  .portfolio-sub-title {
+    font-size: 0.8rem;
+  }
+
+  .resume,
+  .about_description, 
+  .portfolio_description,
+  .portfolio_contents-subtitle,
+  #portfolio li {
+    font-size: 0.8em;
+    line-height: 1.4rem;
+  }
+
+  footer p {
+    font-size: 0.6rem;
+  }
+
+  .name-title-container {
+    align-items: flex-start;
+    margin-bottom: 4rem;
+  }
+
+  .portfolio_contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央に要素を配置 */
+  }
+
+  .portfolio-title-container {
+    margin-bottom: 4rem;
+  }
+
+  .portfolio_captier {
+    order: 1; /* タイトルの後に画像を配置 */
+    width: 100%; 
+    max-width: 100%;
+    position: relative;
+    top: 0; /* topの位置をリセット */
+  }
+
+  #portfolio article {
+    order: 2; /* 画像の後にテキストを配置 */
+    padding-top: 20px; 
+  }
+  
+  .portfolio_captier img {
+    content: url('img/portfolio_img_mobile.png');
+    object-fit: cover; /* 画像がコンテナにぴったり収まるように調整 */
+  }
+
+  nav a {
+    font-size: 0.8em;
+  }
+}
+  
